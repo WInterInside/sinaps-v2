@@ -1,0 +1,29 @@
+@use "base/mixins" as mixins;
+@use "base/variables" as vars;
+
+.footer {
+  background-image: url("../assets/images/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 24px;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+}
+
+@media #{vars.$xsmall} {
+  .footer {
+    &__wrapper {
+      font-size: 18px;
+      gap: 16px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}

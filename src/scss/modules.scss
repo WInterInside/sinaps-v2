@@ -1,0 +1,64 @@
+@use "base/mixins" as mixins;
+@use "base/variables" as vars;
+
+.modules {
+  padding: 40px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    & h2 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    & span {
+      font-size: 40px;
+      font-weight: 300;
+    }
+  }
+  &__wrapper {
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    &--bordered {
+      border-bottom: 1px solid #fff;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+    }
+  }
+  &__value {
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  &__rating {
+    display: flex;
+    gap: 2px;
+
+    & i {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #fff;
+
+      &.empty {
+        background-color: #030303;
+      }
+    }
+  }
+}

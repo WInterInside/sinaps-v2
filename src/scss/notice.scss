@@ -32,6 +32,7 @@
     padding: 32px 32px 24px 32px;
   }
   &__decor-content {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,14 +49,66 @@
     background-color: #01d344;
   }
   &__decor {
-    max-height: 330px;
     flex-grow: 1;
     position: relative;
+    overflow: hidden;
     & img {
+      position: absolute;
       width: 100%;
       height: 100%;
       inset: 0;
       object-fit: cover;
+      transition: transform 4s ease-in-out;
+      transform-origin: center;
+      animation: stretchMove 4s infinite alternate ease-in-out;
     }
+  }
+}
+
+@media #{vars.$small} {
+  .notice {
+    &__footer,
+    &__caption {
+      font-size: 24px;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+    &__content-wrapper {
+      max-width: 100%;
+    }
+  }
+}
+
+@media #{vars.$xsmall} {
+  .notice {
+    &__footer {
+      font-size: 16px;
+    }
+    &__caption {
+      font-size: 2-px;
+    }
+    &__decor-content {
+      gap: 20px;
+      width: 50%;
+    }
+    &__content-wrapper {
+      max-width: 100%;
+      gap: 20px;
+      padding: 20px;
+      flex-direction: column;
+    }
+  }
+}
+
+@keyframes stretchMove {
+  0% {
+    transform: scale(1, 1) translateX(0);
+  }
+  50% {
+    transform: scale(1.2, 1.3) translateX(10px); /* смещение на 10px вправо */
+  }
+  100% {
+    transform: scale(1, 1) translateX(0);
   }
 }

@@ -3,9 +3,19 @@
 
 .run {
   width: 100vw;
-  height: 330px;
   overflow: hidden;
-
+  &__mobile {
+    height: 220px;
+    flex-grow: 1;
+    position: relative;
+    display: none;
+    & video {
+      width: 100%;
+      height: 120%;
+      inset: 0;
+      object-fit: cover;
+    }
+  }
   &__marquee {
     display: flex;
     width: 200vw;
@@ -14,14 +24,15 @@
   }
 
   &__item {
+    background-color: #fff;
     display: flex;
-    width: 100vw;
-    height: 100%;
+    height: 381px;
     flex-shrink: 0;
   }
 
   &__img-box {
     flex-grow: 1;
+    margin-left: -2px;
     height: 100%;
     position: relative;
     background-color: #fff;
@@ -37,9 +48,24 @@
     position: relative;
     & video {
       width: 100%;
-      height: 100%;
+      height: 120%;
       inset: 0;
       object-fit: cover;
+    }
+  }
+}
+
+@media #{vars.$small} {
+  .run {
+    height: auto;
+    &__mobile {
+      display: block;
+    }
+    &__item {
+      flex-direction: column;
+    }
+    &__video-box {
+      display: none;
     }
   }
 }

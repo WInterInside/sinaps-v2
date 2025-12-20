@@ -61,6 +61,7 @@
     pointer-events: none;
   }
   &__text-decor {
+    white-space: nowrap;
     font-size: 24px;
     font-weight: 300;
     position: absolute;
@@ -69,31 +70,31 @@
     }
     &--1 {
       top: 10%;
-      left: 30%;
+      left: 20%;
     }
     &--2 {
       top: 20%;
-      left: 67%;
+      left: 55%;
     }
     &--3 {
       top: 50%;
-      left: 30%;
+      left: 22%;
     }
     &--4 {
       top: 80%;
-      left: 5%;
+      left: 7%;
     }
     &--5 {
       top: 8%;
-      left: 66%;
+      left: 60%;
     }
     &--6 {
       top: 68%;
       left: 66%;
     }
     &--7 {
-      top: 8%;
-      left: 66%;
+      top: 63%;
+      left: 44%;
     }
   }
   &__wrapper {
@@ -166,9 +167,34 @@
       display: none;
     }
     &__text-decor {
-      white-space: nowrap;
       &--lg {
         font-size: 50px;
+      }
+      &--1 {
+        top: 10%;
+        left: 40%;
+      }
+      &--2 {
+        display: none;
+      }
+      &--3 {
+        top: 50%;
+        left: 55%;
+      }
+      &--4 {
+        top: 80%;
+        left: -5%;
+      }
+      &--5 {
+        display: none;
+      }
+      &--6 {
+        top: 68%;
+        left: 50%;
+      }
+      &--7 {
+        top: 30%;
+        left: 80%;
       }
     }
   }

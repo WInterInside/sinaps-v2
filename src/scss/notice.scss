@@ -50,6 +50,7 @@
   }
   &__decor {
     flex-grow: 1;
+    min-height: 236px;
     position: relative;
     overflow: hidden;
     & img {

@@ -144,7 +144,7 @@ button::-moz-selection {
   background: transparent;
 }
 
-@media #{vars.$small} {
+@media #{vars.$xsmall} {
   .container {
     padding: 0 16px;
   }

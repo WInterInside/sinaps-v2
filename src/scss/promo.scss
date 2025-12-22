@@ -116,6 +116,10 @@
           left: 0;
         }
       }
+
+      & .promo__item-line--2 {
+        height: 124px;
+      }
     }
   }
 
@@ -185,7 +189,7 @@
     &--2 {
       top: 52px;
       left: 32px;
-      height: 124px;
+      height: 100px;
       width: 1px;
     }
   }
@@ -235,6 +239,7 @@
       top: auto;
     }
   }
+
   &__numbers {
     display: flex;
     flex-wrap: wrap;
@@ -629,6 +634,7 @@
       margin-top: auto;
       margin-bottom: 40px;
       top: auto;
+      gap: 14px;
       bottom: auto;
       right: auto;
       position: relative;

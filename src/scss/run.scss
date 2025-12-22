@@ -4,6 +4,7 @@
 .run {
   width: 100vw;
   overflow: hidden;
+  position: relative;
 
   &__mobile {
     height: 220px;
@@ -47,8 +48,13 @@
 
   &__video-box {
     flex-grow: 1;
+    top: 0;
+    z-index: 1;
     height: 100%;
-    position: relative;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    height: 381px;
 
     & video {
       width: 100%;
